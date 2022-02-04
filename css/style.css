@@ -1,0 +1,403 @@
+/*подключаю шрифты изучеными способами*/
+@import url("https://fonts.googleapis.com/css?family=Rowdies:300,regular,700&display=swap");
+
+@font-face {
+	font-family: "Minako";
+	src: url("../fonts/Minako-Light-Regular.woff2") format("woff2"),
+		url("../fonts/Minako-Light-Regular.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Minako";
+	src: url("../fonts/Minako-Regular.woff2") format("woff2"), url("../fonts/Minako-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Troika";
+	src: url("../fonts/Troika.woff2") format("woff2"), url("../fonts/Troika.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+/*Задаю боди подключенный шрифт, использую селектор тега*/
+body {
+	font-family: "Rowdies", sans-serif;
+}
+/*оболчка всего контента врапер*/
+.wraper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/*============здесь я применяю разные виды селекторов, отступы внутринение и внешние,
+изученые свойства текста, и эксперементирую с преоритетностью селекторов */
+.header {
+	font-family: "Rowdies", sans-serif;
+	margin: 0px 0px 30px 0px;
+}
+.title {
+	font-family: "Merriweather", sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 40px;
+	text-align: right;
+	padding: 0px 20px 0px 0px;
+	color: #213d57;
+	margin: 50px 0px 30px 0px;
+}
+.image {
+	text-align: center;
+	margin: 0px 0px 30px 0px;
+}
+/*селектор класса + селектор тега*/
+.image img {
+	width: 500px;
+	height: 500px;
+}
+.menu {
+	margin: 0px 0px 30px 0px;
+	text-align: right;
+}
+.menu-list li {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0px 0px 10px 0px;
+	color: blue;
+	padding: 0px 20px 0px 0px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+/*селектор ID*/
+#number {
+	font-family: "Minako", sans-serif;
+	font-size: 40px;
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 0px 50px;
+}
+.top-text1 {
+	width: 300px;
+	color: rgb(255, 94, 0);
+	line-height: 1.5;
+	margin: 0px 0px 20px 0px;
+}
+.top-text2 {
+	max-width: 400px;
+	color: brown;
+	text-transform: uppercase;
+	font-family: "Merriweather", sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	line-height: 1.5;
+	margin: 0px 0px 20px 50px;
+}
+.image2 {
+	text-align: center;
+}
+
+.image2 img {
+	width: 500px;
+	height: 500px;
+}
+.top-text3 {
+	max-width: 500px;
+	color: rgb(0, 71, 21);
+	line-height: 1.5;
+	padding: 50px;
+	margin: 0px 0px 20px 30px;
+}
+.top-text4 {
+	max-width: 800px;
+	color: rgb(71, 40, 0);
+	line-height: 1.5;
+	font-weight: 400;
+	padding: 50px;
+	margin: 0px 0px 20px 30px;
+}
+/*перезапись одного и того же селектора, тот который снизу имеет больший приоритет*/
+.top-text4 {
+	max-width: 700px;
+	color: rgb(71, 2, 0);
+	line-height: 1.1;
+	font-size: 25px;
+	font-weight: 700;
+	padding: 10px;
+	margin: 0px 0px 20px 10px;
+}
+.work {
+	font-family: "Merriweather", sans-serif;
+	margin: 0px 0px 20px 0px;
+}
+.work-title {
+	font-family: "Minako", sans-serif;
+	font-size: 50px;
+	font-weight: 300;
+	color: blueviolet;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 10px;
+}
+.work-text {
+	max-width: 500px;
+	font-size: 20px;
+	text-shadow: 10px 10px 10px rgb(68, 73, 0);
+	line-height: 1.1;
+	margin-bottom: 10px;
+}
+.work-image {
+	text-align: center;
+	margin: 0px 0px 20px 0px;
+}
+.work-image img {
+	width: 300px;
+	height: 300px;
+}
+.work-text1 {
+	max-width: 663px;
+	font-weight: 300;
+	color: rgb(0, 60, 78);
+	padding: 0px 0px 0px 20px;
+	line-height: 1.6;
+}
+/*переписал некотрые параметры сразу для 2х селекторов класса*/
+.work-text,
+.work-text1 {
+	max-width: 800px;
+	color: rgb(0, 60, 78);
+	padding: 0px 0px 0px 20px;
+	line-height: 1.6;
+}
+/*==================== свойство overflow==========================*/
+/* у селектора класса .wraper стоит уже overflow:hidden; 
+поэтому когда я добавляю много контента в огрниченый по высоте блок он скрывается за счет этого значения*/
+.overflow {
+}
+.overflow-title {
+	font-family: "Minako", sans-serif;
+	font-size: 50px;
+	color: rgb(53, 0, 102);
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 10px;
+}
+/*но я могу преписать это значение конкретному селектору и сделать скрол*/
+.oveflow-text {
+	max-width: 700px;
+	height: 400px;
+	color: rgb(0, 78, 13);
+	padding: 20px;
+	line-height: 1.6;
+	overflow: scroll;
+}
+/*===========================Управление типом обьекта!!! display====================================*/
+.display {
+	margin: 0px 0px 20px 0px;
+}
+.display-title {
+	font-family: "Minako", sans-serif;
+	font-size: 50px;
+	color: rgb(0, 99, 102);
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 10px;
+}
+.dispaly-text,
+.dispaly-text1 {
+	max-width: 800px;
+	color: rgb(3, 78, 0);
+	padding: 0px 0px 0px 20px;
+	line-height: 1.6;
+	margin: 0px 0px 20px 0px;
+}
+.dispaly-text2 {
+	display: inline-block;
+	max-width: 300px;
+	font-size: 20px;
+	color: rgb(0, 24, 46);
+	margin: 0px 20px 0px 0px;
+	padding: 20px;
+}
+/* тег img изначально идет inline-block (блочно строчный)*/
+img .display-image {
+	max-width: 300px;
+	max-height: 300px;
+}
+.display-title2 {
+	font-family: "Minako", sans-serif;
+	font-size: 50px;
+	color: rgb(57, 82, 0);
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 10px;
+}
+.text-inline {
+	display: inline-block;
+	max-width: 900px;
+	font-size: 20px;
+	color: rgb(33, 0, 46);
+	margin: 0px 20px 0px 0px;
+	padding: 20px;
+}
+.text-inline .display-text4 {
+	margin: 0px 0px 80px 0px;
+}
+.display-image2 {
+	width: 500px;
+	height: 500px;
+	margin: 0px 0px 0px 450px;
+}
+/*это эксперимент я знаю что так не желательно делать!!!*/
+.display-text6 {
+	display: none;
+}
+.crisis {
+	margin: 0px 0px 20px 0px;
+}
+.crisis-title {
+	font-family: "Minako", sans-serif;
+	font-size: 50px;
+	text-align: center;
+	color: rgb(0, 82, 41);
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 10px;
+}
+.crisis-text {
+	display: inline-block;
+	line-height: 1.6;
+	color: rgb(0, 129, 28);
+	max-width: 660px;
+	margin: 0px 50px 0px 0px;
+}
+.crisis-text2 {
+	display: inline-block;
+	color: rgb(41, 129, 0);
+	max-width: 650px;
+}
+/*================================================================*/
+/*эксперимент с overflow:hidden и отрицательным margin*/
+.death {
+	max-width: 800px;
+	overflow: hidden;
+	margin: 0px 0px 40px 0px;
+}
+.death-title {
+	font-family: "Minako", sans-serif;
+	font-size: 50px;
+	text-align: center;
+	color: rgb(82, 0, 0);
+	margin: 0px 0px 10px 0px;
+}
+.death-text {
+	margin: 0px -400px 0px 0px;
+	color: rgb(0, 26, 44);
+}
+/*=========================FOOTER использование margin для выравнивания===============================*/
+.footer {
+}
+.conteiner {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.footer-text {
+	display: inline-block;
+	font-size: 13px;
+	color: rgb(114, 114, 114);
+	text-decoration: underline;
+	margin: 0px 80px 0px 0px;
+}
+.footer-list {
+	display: inline-block;
+	color: rgb(114, 114, 114);
+	margin: 0px 20px 0px 0px;
+}
+.footer-list li {
+	margin: 0px 0px 10px 0px;
+}
+a.link {
+	font-family: "Troika", sans-serif;
+	font-size: 30px;
+	color: rgb(61, 0, 97);
+	display: inline-block;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 10px 10px 4px rgb(71, 71, 71);
+}
+/*======================================макет из FIGMA===========================================*/
+.figma-conteiner {
+	max-width: 810px;
+	margin: 0 auto;
+}
+.header {
+	font-family: "Lato", sans-serif;
+	margin: 0px 0px 60px 0px;
+}
+.header-title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+	margin: 100px 0px 94px 0px;
+	color: #1e212c;
+}
+.content-image {
+}
+.content {
+	font-family: "Lato", sans-serif;
+	margin: 0px 0px 60px 0px;
+}
+.content-text1 {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 150%;
+	color: #1e212c;
+	margin: 0px 0px 22px 0px;
+}
+.content-text2,
+.content-text3 {
+	line-height: 160%;
+	color: #424551;
+	margin: 0px 0px 48px 0px;
+}
+.content-text2 {
+	margin: 0px 0px 37px 0px;
+}
+.content-text4 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 150%;
+	color: #1e212c;
+	padding: 0px 0px 0px 58px;
+	margin: 0px 0px 48px 0px;
+}
+.content-text5 {
+	font-size: 16px;
+	line-height: 160%;
+	color: #424551;
+	margin: 0px 0px 24px 0px;
+}
+.content-list {
+	max-width: 568px;
+	font-size: 16px;
+	line-height: 160%;
+	color: #424551;
+	padding: 0px 0px 0px 16px;
+	margin: 0px 0px 24px 0px;
+}
+.content-list li {
+	margin: 0px 0px 4px 0px;
+}
+.content-text6 {
+	font-size: 16px;
+	line-height: 160%;
+	color: #424551;
+}
+.footer {
+	font-family: "Lato", sans-serif;
+}
+.link-footer {
+	font-family: "Troika", sans-serif;
+	font-size: 30px;
+	color: rgb(0, 66, 97);
+	display: inline-block;
+	text-decoration: underline;
+	text-shadow: 10px 10px 4px rgb(71, 71, 71);
+	padding: 60px;
+}
